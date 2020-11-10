@@ -634,7 +634,7 @@ print("balanced_accuracy_2: ", balanced_accuracy_2(y_true,y_pred,alpha=2))
 # function which calculates the sum of the last five lines and five first columns of C
 def sum_unwanted(clf):
     C=confusion_matrix(y_test, clf.predict(X_test))
-    res = sum(C[5][:4])+sum(C[6][:5])+sum(C[7][:6])+sum(C[8][:7])+sum(C[9][:8])
+   res = sum(C[5][:5])+sum(C[6][:5])+sum(C[7][:5])+sum(C[8][:5])+sum(C[9][:5])
     return(res)
 ```
 
@@ -778,8 +778,7 @@ evaluation_model(clf8_alpha1)
      [ 0  0  0  0  2  0  0  2  1 21]]
     
 
-We can notice that, here, the parameter of the initial model `C=0.015625`is not the one which minimizes the sum of the bottom left quarter of the confusion matrix. The minimum is $13$ for `C=0.125`.
-
+We can notice that, here, the parameter of the initial model `C=0.015625`is not the one which minimizes the sum of the bottom left quarter of the confusion matrix. The minimum is $8$ for `C=0.125` and `C=0.25`.
 
 ```python
 for c in np.logspace(-8, 8, 17, base=2):
