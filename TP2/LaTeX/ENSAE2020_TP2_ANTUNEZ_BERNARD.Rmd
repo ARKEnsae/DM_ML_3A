@@ -210,7 +210,7 @@ And it solved the warning! See the execution of the code in Annex \ref{annexe:an
 
 Below, you can see the same actions but using the **SVM** method instead of logistic regressions. The main differences are: 
 
-- This time we use the following scaler : `MaxAbsScaler()`
+- This time we use the following scaler : `MinMaxScaler()`
 - We use `LinearSVC()` instead of `LogisticRegression()`
 - We test the parameter `svc__C` instead of `logreg__C`
 
@@ -834,7 +834,7 @@ The variables deleted from the dataset because they cannot be observed at the mo
 
 \newpage
 
-# Code for part III {#annexe:annexe5}
+# Code of part III {#annexe:annexe5}
 
 ```python
 #import packages for part III

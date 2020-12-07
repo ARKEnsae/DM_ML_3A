@@ -1,3 +1,0 @@
-## Convertir en Markdown pour le rapport latex : copier coller dans le terminal Jupyter. 
-cd "C:\Users\Kim Antunez\Desktop\3A\ML\DM_ML\TP1"
-jupyter nbconvert --to markdown TP1_KA_IB.ipynb
