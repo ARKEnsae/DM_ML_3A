@@ -223,10 +223,10 @@ testset = datasets.MNIST('data/',
 testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=True)
 
 test_loss, test_acc = validation(MLR, testloader, criterion)
-print(f'Test accuracy: {test_acc} | Test loss: {test_loss}')
+print(f'Test accuracy: {test_acc}')
 ```
 
-    Test accuracy: 0.83 | Test loss: 0.9829374759674072
+    Test accuracy: 0.83
 
 
 # Problem 2: Dropout
@@ -245,7 +245,7 @@ In Pytorch, we simply need to introduce `nn.Dropout` layers specifying the rate 
 
 **2. High level description of your architechture**
 
-We read many articles including the [one](https://www.kaggle.com/c/digit-recognizer/discussion/61480) recommanded by this subject or [this one](https://github.com/jeremyfix/deeplearning-lectures/blob/master/LabsSolutions/00-pytorch-FashionMNIST/models.py) and implemented **3 different architectures**, still on two epochs (using more epochs was too long to compute). See the codes below. 
+We read many articles including the [one](https://www.kaggle.com/c/digit-recognizer/discussion/61480) recommanded by this subject or [this one](https://github.com/jeremyfix/deeplearning-lectures/blob/master/LabsSolutions/00-pytorch-FashionMNIST/models.py) and implemented **3 different architectures**, still on two epochs (using more epochs was too long to compute). See the codes in annex \ref{annexe:annexe1}. 
 
 1. For the first architecture `ConvNet2`, we simply implementes the previous architecture `ConvNet` but we add a 50 % probability dropout before the penultimate linear layer. The forward pass does not change.
 
